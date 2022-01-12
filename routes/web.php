@@ -23,7 +23,7 @@ use App\Http\Controllers\ManageMoneyController;
 
 Route::get("/",[HomeController::class,'index']);
 
-Route::prefix("auth", function(){
+Route::prefix("auth")->group(function(){
 
     // Login
     Route::get("/login",[LoginController::class,'login']);
@@ -31,14 +31,14 @@ Route::prefix("auth", function(){
     Route::get("/logout",[LoginController::class,'logout'])->name("logout");
 
     // Register
-    Route::get("/register",[LoginController::class,'register']);
-    Route::get("/postregister",[LoginController::class,'postregister'])->name("post.register");
+    Route::get("/register",[RegisterController::class,'register']);
+    Route::get("/postregister",[RegisterController::class,'postregister'])->name("post.register");
 });
 
-Route::prefix("dashboard", function(){
+Route::prefix("dashboard")->group(function(){
 
     // Dashboard
-    Route::get("/home",[DashboardController::class,"index"])->name("dashboard");
+    Route::get("/",[DashboardController::class,"index"])->name("dashboard");
 
     // Manage Money
     Route::get("/mymoney",[ManageMoneyController::class,"index"]);
