@@ -8,20 +8,30 @@ class ManageMoneyController extends Controller
 {
     public function index()
     {
-        //
+        return view("dashboard.user.index");
     }
 
     public function create()
     {
-        //
+        return view("dashboard.user.create");
     }
 
-    public function store()
+    public function store(Request $req)
     {
         //
     }
 
-    public function destroy()
+    public function edit($id)
+    {
+        //
+    }
+
+    public function update(Request $req)
+    {
+        //
+    }
+
+    public function destroy($id)
     {
         //
     }
