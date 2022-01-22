@@ -29,7 +29,7 @@ class LoginController extends Controller
         if(Auth::attempt(["name" => $req->name,"password" => $req->password]))
         {
             $req->session()->regenerate();
-            return redirect("dashboard.index");
+            return redirect("/dashboard");
         }else{
             Flash::message("login gagal!");
             return redirect()->back();
@@ -44,6 +44,6 @@ class LoginController extends Controller
         $req->session()->invalidate();
         $req->session()->regenerateToken();
 
-        return redirect("auth.login");
+        return redirect("/auth/login");
     }
 }

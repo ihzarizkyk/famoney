@@ -11,7 +11,7 @@
 		    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 		      <div class="navbar-nav">
 		        <a class="nav-link active" aria-current="page" href="#">Home</a>
-		        <a class="nav-link active" href="#">Login</a>
+		        <a class="nav-link active" href="auth/login">Login</a>
 		      </div>
 		    </div>
 		  </div>

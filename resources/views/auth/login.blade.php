@@ -9,7 +9,8 @@
 						<h3 class="card-title">
 							Login Form - Famoney App
 						</h3>
-						<form action="#" class="form" method="POST" name="loginform">
+						<form action="{{route('post.login')}}" class="form" method="POST" name="loginform">
+							@csrf
 							<div class="form-group">
 								<label for="username"><b>Username</b></label>
 								<input type="text" class="form-control" name="name" autocomplete="off">
@@ -17,7 +18,7 @@
 							<br>
 							<div class="form-group">
 								<label for="password"><b>Password</b></label>
-								<input type="password" class="form-control" name="passwword" autocomplete="off">
+								<input type="password" class="form-control" name="password" autocomplete="off">
 							</div>
 							<br>
 							<input type="submit" class="btn btn-primary rounded-pill" value="Login">

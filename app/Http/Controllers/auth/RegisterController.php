@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
@@ -17,23 +18,18 @@ class RegisterController extends Controller
     public function postregister(Request $req)
     {
         $req->validate([
-            "name" => "required",
-            "email" => "required",
+            "name" => "required|unique:users,name",
+            "email" => "required|unique:users,email",
             "password" => "required"]);
 
-        if(Auth::check())
-        {
-            return redirect()->back();
-        }else{
             $usr = User::create([
                 "name" => $req->name,
-                "emai" => $req->email,
+                "email" => $req->email,
                 "password" => Hash::make($req->password)]);
             $req->session()->regenerate();
 
             Auth::login($usr);
             
             return redirect("dashboard.index");
-        }
     }
 }
