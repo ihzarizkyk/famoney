@@ -23,7 +23,11 @@
 							<p class="text-secondary mt-2"><i class="fas fa-question-circle"></i> Don't have an account? <a href="/auth/register">Register Here</a></p>
 							<br>
 							<div class="text-center">
-								<input type="submit" class="btn-lg btn-primary rounded-pill" value="Login">
+								<input type="submit" class="btn btn-lg btn-primary rounded-pill" value="Login">
+
+								<a href="/" class="btn btn-lg btn-danger rounded-pill">
+									Back
+								</a>
 							</div>
 						</form>
 					</div>

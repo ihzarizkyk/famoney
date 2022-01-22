@@ -41,7 +41,10 @@
 							<p class="text-secondary mt-2"><i class="fas fa-question-circle"></i> Already Have an Account? <a href="/auth/login">Please login here</a> </p>
 							<br>
 							<div class="text-center">
-								<input type="submit" class="btn -lg btn-primary rounded-pill" value="Register">
+								<input type="submit" class="btn btn-lg btn-primary rounded-pill" value="Register">
+								<a href="/" class="btn btn-lg btn-danger rounded-pill">
+									Back
+								</a>
 							</div>
 						</form>
 					</div>
