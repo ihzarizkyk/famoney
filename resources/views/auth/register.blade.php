@@ -12,7 +12,7 @@
 						<form action="{{route('post.register')}}" class="form" method="POST" name="registerform">
 							@csrf
 							<div class="form-group">
-								<label for="email"><b>Email</b></label>
+								<label for="email"><b>Email <span class="text-danger">(*)</span></b></label>
 								<input type="text" class="form-control" name="email" autocomplete="off">
 								@error('email')
 								<span class="text-danger">{{$message}}
@@ -21,7 +21,7 @@
 							</div>
 							<br>
 							<div class="form-group">
-								<label for="username"><b>Username</b></label>
+								<label for="username"><b>Username <span class="text-danger">(*)</span></b></label>
 								<input type="text" class="form-control" name="name" autocomplete="off">
 								@error('name')
 								<span class="text-danger">{{$message}}
@@ -30,7 +30,7 @@
 							</div>
 							<br>
 							<div class="form-group">
-								<label for="password"><b>Password</b></label>
+								<label for="password"><b>Password <span class="text-danger">(*)</span></b></label>
 								<input type="password" class="form-control" name="password">
 								@error('password')
 								<span class="text-danger">{{$message}}

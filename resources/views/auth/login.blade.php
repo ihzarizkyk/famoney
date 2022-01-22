@@ -12,12 +12,12 @@
 						<form action="{{route('post.login')}}" class="form" method="POST" name="loginform">
 							@csrf
 							<div class="form-group">
-								<label for="username"><b>Username</b></label>
+								<label for="username"><b>Username <span class="text-danger">(*)</span></b></label>
 								<input type="text" class="form-control" name="name" autocomplete="off">
 							</div>
 							<br>
 							<div class="form-group">
-								<label for="password"><b>Password</b></label>
+								<label for="password"><b>Password <span class="text-danger">(*)</span></b></label>
 								<input type="password" class="form-control" name="password" autocomplete="off">
 							</div>
 							<p class="text-secondary mt-2"><i class="fas fa-question-circle"></i> Don't have an account? <a href="/auth/register">Register Here</a></p>
