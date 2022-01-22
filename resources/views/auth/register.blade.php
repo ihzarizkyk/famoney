@@ -6,7 +6,7 @@
 			<div class="col col-lg-6">
 				<div class="card">
 					<div class="card-body">
-						<h3 class="card-title fw-bolder">
+						<h3 class="card-title fw-bolder text-center">
 							Register - Famoney App
 						</h3>
 						<form action="{{route('post.register')}}" class="form" method="POST" name="registerform">
@@ -76,6 +76,14 @@
 /*	input['text']{
 		border-radius: 10px;
 	}*/
+
+	input[type=text]{
+		border-radius: 10px;
+	}
+
+	input[type=password]{
+		border-radius: 10px;
+	}
 	</style>
 	@endpush
 @endonce
