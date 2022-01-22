@@ -14,12 +14,12 @@ class ManageMoneyController extends Controller
 
     public function index()
     {
-        return view("dashboard.user.index");
+        return view("dashboard.money.index");
     }
 
     public function create()
     {
-        return view("dashboard.user.create");
+        return view("dashboard.money.create");
     }
 
     public function store(Request $req)
