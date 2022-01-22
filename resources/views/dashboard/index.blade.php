@@ -1,2 +1,7 @@
-<h1>{{Auth::user()->name}}</h1>
-<a href="/auth/logout" style="color:red;">Keluar</a>
+@extends('layouts.app')
+@section('title','DASHBOARD Famoney App')
+@section('content')
+	<h1 class="fs-1 fw-bolder">
+		{{Auth::user()->name}}
+	</h1>
+@endsection
