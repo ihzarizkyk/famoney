@@ -10,6 +10,11 @@
 		    </button>
 		    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 		      <div class="navbar-nav">
+<<<<<<< HEAD
+=======
+		        <a class="nav-link active" aria-current="page" href="#">Home</a>
+		        <a class="nav-link active" href="auth/login">Login</a>
+>>>>>>> refs/remotes/origin/master
 		      </div>
 		    </div>
                 <div class="row">

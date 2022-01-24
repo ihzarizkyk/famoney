@@ -6,8 +6,14 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
+
+    public function __construct()
+    {
+        return $this->middleware(["auth"]);
+    }
+
     public function index()
     {
-        return redirect("dashboard.index");
+        return view("dashboard.index");
     }
 }

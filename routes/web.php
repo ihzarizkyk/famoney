@@ -19,7 +19,7 @@ Route::prefix("auth")->group(function(){
 
     // Register
     Route::get("/register",[RegisterController::class,'register']);
-    Route::get("/postregister",[RegisterController::class,'postregister'])->name("post.register");
+    Route::post("/postregister",[RegisterController::class,'postregister'])->name("post.register");
 });
 
 Route::prefix("dashboard")->group(function(){
