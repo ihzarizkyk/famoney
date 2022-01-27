@@ -30,7 +30,7 @@
                         		<td>{{$us->email}}</td>
                         		<td>{{$us->role}}</td>
                         		<td>{{date('d-m-Y', strtotime($us->created_at));}}</td>
-                        		<td><a href="/dashboard/user/{{$us->id}}/delete" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a></td>
+                        		<td><a href="/dashboard/user/{{$us->id}}/delete" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure? ');"><i class="fas fa-trash"></i></a></td>
                         	</tr>
                         	@endforeach
                         </tbody>

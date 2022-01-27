@@ -45,7 +45,7 @@
                         		<td>{{$mn->category->name}}</td>
                         		<td>{{$mn->nominal}}</td>
                         		<td>{{date('d-m-Y', strtotime($mn->created_at));}}</td>
-                        		<td><a href="/dashboard/mymoney/{{$mn->id}}/delete" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a></td>
+                        		<td><a href="/dashboard/mymoney/{{$mn->id}}/delete" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure? ');"><i class="fas fa-trash"></i></a></td>
                         	</tr>
                         	@endforeach
                         </tbody>

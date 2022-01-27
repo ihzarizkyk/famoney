@@ -55,7 +55,6 @@
                                         <a class="dropdown-item" href="#!">
                                         {{Auth::user()->name}}
                                         </a>
-                                        <a class="dropdown-item" href="#">About</a>
                                         <div class="dropdown-divider"></div>
                                         <a class="dropdown-item" href="/auth/logout">Logout</a>
                                     </div>

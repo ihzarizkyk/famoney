@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Money;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use PDF;
 
 class RecaptController extends Controller
@@ -17,7 +18,7 @@ class RecaptController extends Controller
 
     public function index()
     {
-        $money = Money::with('category')->get();
+        $money = Auth::user()->money()->with('category')->get();
         return view("dashboard.report.index",compact('money'));
     }
 
