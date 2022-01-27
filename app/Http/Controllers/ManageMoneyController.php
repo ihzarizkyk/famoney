@@ -21,7 +21,7 @@ class ManageMoneyController extends Controller
         $pemasukan = Auth::user()->money()->where('category_id',"=",1)->sum('nominal');
         $pengeluaran = Auth::user()->money()->where('category_id',"=",2)->sum('nominal');
         $total = $pemasukan - $pengeluaran;
-        $limit = $pemasukan * 80/100;
+        $limit = $pemasukan >= ($pemasukan * 80/100);
         return view("dashboard.money.index",compact('money','pemasukan','pengeluaran','limit','total'));
     }
 
