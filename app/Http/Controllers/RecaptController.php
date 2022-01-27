@@ -31,7 +31,7 @@ class RecaptController extends Controller
 
     public function reportAll(Request $req)
     {
-        $money = Money::with('category')->get();
+        $money = Auth::user()->money()->with('category')->get();
         $pdf = PDF::loadview('dashboard.report.pdf',['money' => $money]);
         return $pdf->stream();
     }

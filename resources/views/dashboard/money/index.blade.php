@@ -12,7 +12,7 @@
 	</a>
 
 	@if($total == 0)
-	<div class="alert bg-primary text-white">Anda menyimpan atau mengeluarkan uang berapapun</div>
+	<div class="alert bg-primary text-white">Anda belum menyimpan atau mengeluarkan uang berapapun</div>
 	@elseif($limit)
 	<div class="alert fw-bold bg-warning">Pengeluaran anda melebihi batas wajar</div>
 	@endif
