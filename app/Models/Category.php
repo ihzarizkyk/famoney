@@ -15,6 +15,6 @@ class Category extends Model
 
     public function Money()
     {
-        return $this->belongsTo(Money::class);
+        return $this->hasOne(Money::class);
     }
 }

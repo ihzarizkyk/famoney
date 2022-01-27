@@ -4,6 +4,9 @@
 	<div class="container">
 		<div class="row d-flex justify-content-center mt-3 px-5 py-5">
 			<div class="col col-lg-6">
+				<div class="text-center mb-3">
+					<img class="img" src="{{asset('Image/LOGO-light.png')}}" alt="Logo Famoney">
+				</div>
 				<div class="card">
 					<div class="card-body">
 						<h3 class="card-title fw-bolder text-center">

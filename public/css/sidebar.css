@@ -4833,7 +4833,7 @@ textarea.form-control-lg {
   z-index: 1;
   color: #495057;
   text-decoration: none;
-  background-color: #f8f9fa;
+  background-color: black;
 }
 .list-group-item-action:active {
   color: #212529;
@@ -4846,7 +4846,7 @@ textarea.form-control-lg {
   padding: 0.5rem 1rem;
   color: #212529;
   text-decoration: none;
-  background-color: #fff;
+  background-color: black;
 }
 .list-group-item:first-child {
 }
@@ -5110,7 +5110,7 @@ textarea.form-control-lg {
 
 .list-group-item-light {
   color: white;
-  background-color: #086499;
+  background-color: black;
   border: 2px solid white;
   border-radius: 15px;
   margin-bottom: 10px;

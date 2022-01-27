@@ -31,7 +31,6 @@ class LoginController extends Controller
             $req->session()->regenerate();
             return redirect("/dashboard");
         }else{
-            Flash::message("login gagal!");
             return redirect()->back();
         }
 

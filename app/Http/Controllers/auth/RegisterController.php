@@ -10,6 +10,12 @@ use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
+
+    public function __construct()
+    {
+        return $this->middleware(['guest']);
+    }
+
     public function register()
     {
         return view("auth.register");

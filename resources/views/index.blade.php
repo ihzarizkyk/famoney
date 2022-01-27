@@ -2,7 +2,7 @@
 @section('title','Famoney App')
 @section('content')
 
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
 		  <div class="container-fluid">
 		    <a class="navbar-brand fw-bold" href="#"> <img src="Image/LOGO.png" width="140" height="38"></a>
 		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,8 +14,8 @@
 		    </div>
                 <div class="row">
                     <div class=" text-right">
-                        <button type="button" class="btn btn-outline-primary m-2" >SIGN UP</button>
-                        <button  type="button" class="btn btn-primary m-2">LOGIN</button>
+                        <a href="/auth/register" class="btn btn-outline-primary m-2" >REGISTER</a>
+                        <a href="/auth/login" class="btn btn-primary m-2">LOGIN</a>
                     </div>
                 </div>
 		  </div>
@@ -47,7 +47,7 @@
         <div class="row mt-5">
 
 			<div class="col-12 text-center mb-3">
-				<h2 class="fs-3 fw-semibold">
+				<h2 class="fs-3 fw-bold">
 					OUR FEATURE
 				</h2>
 			</div>
@@ -106,7 +106,7 @@
 				</div>
 			</div>
         <br><br><br><br>
-		<h2 class="text-center fs-3 fw-semibold mb-3">
+		<h2 class="text-center fs-3 fw-bold mb-3">
 			<br>
 				POWERED BY
 			</h2>
@@ -117,6 +117,8 @@
 					<div class="card" id="tech">
 						<div class="card-body">
 							<div class="text-center">
+								<h3 class="fs-5 fw-semibold">
+								LARAVEL
 								</h3>
 								<img src="https://laravel.com/img/logomark.min.svg" width="100px" height="80px" alt="">
 							</div>
@@ -128,6 +130,8 @@
 					<div class="card" id="tech">
 						<div class="card-body">
 							<div class="text-center">
+								<h3 class="fs-5 fw-semibold">
+								MYSQL
 								</h3>
 								<img src="https://www.mysql.com/common/logos/logo-mysql-170x115.png" width="100px" height="80px" alt="">
 							</div>
@@ -139,6 +143,8 @@
 					<div class="card" id="tech">
 						<div class="card-body">
 							<div class="text-center">
+								<h3 class="fs-5 fw-semibold">
+								BOOTSTRAP 5
 								</h3>
 								<img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg" width="100px" height="80px" alt="">
 							</div>
