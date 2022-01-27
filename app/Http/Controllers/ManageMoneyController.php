@@ -17,8 +17,12 @@ class ManageMoneyController extends Controller
 
     public function index()
     {
-        $money = Money::with('category')->get();
-        return view("dashboard.money.index",["money" => $money]);
+        $money = Auth::user()->money()->with('category')->get();
+        $pemasukan = Auth::user()->money()->where('category_id',"=",1)->sum('nominal');
+        $pengeluaran = Auth::user()->money()->where('category_id',"=",2)->sum('nominal');
+        $total = $pemasukan - $pengeluaran;
+        $limit = $pemasukan * 80/100;
+        return view("dashboard.money.index",compact('money','pemasukan','pengeluaran','limit','total'));
     }
 
     public function create()
@@ -39,7 +43,7 @@ class ManageMoneyController extends Controller
         $money->category_id = $req->category;
         $money->save();
 
-        return redirect("/dashboard/mymoney")->with("success","Money saved!");
+        return redirect("/dashboard/mymoney")->with("success","Uang Berhasil Disimpan!");
     }
 
     public function edit($id)
@@ -56,7 +60,7 @@ class ManageMoneyController extends Controller
     {
         $money = Money::findOrFail($id);
         $money->delete();
-        return redirect()->back()->with(["success" => "berhasil dihapus!"]);
+        return redirect()->back()->with(["delete" => "berhasil dihapus!"]);
     }
 
 }

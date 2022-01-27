@@ -11,6 +11,20 @@
 		Create
 	</a>
 
+	@if($total == 0)
+	<div class="alert bg-primary text-white">Anda menyimpan atau mengeluarkan uang berapapun</div>
+	@elseif($pengeluaran == $limit)
+	<div class="alert fw-bold bg-warning">Pengeluaran anda melebihi batas wajar</div>
+	@endif
+
+	@if($message = session('success'))
+	<div class="alert bg-success fw-bold text-white">{{$message}}</div>
+	@endif
+
+	@if($message = session('delete'))
+	<div class="alert bg-success fw-bold text-white">{{$message}}</div>
+	@endif
+
 	<table class="table table-hover" id="table_money">
                         <thead>
                             <tr>

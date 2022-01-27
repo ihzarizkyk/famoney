@@ -16,7 +16,7 @@
 						Kapan anda pertama kali memasukkan / mengeluarkan uang?
 					</h2>
 					<p class="card-text">
-						Senin, 17 Januari 2022
+						-
 					</p>
 				</div>
 			</div>
