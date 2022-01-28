@@ -28,6 +28,7 @@ class UserController extends Controller
     {
         $user = User::findOrFail($req->id);
         $user->role = "admin";
+        $user->save();
         return back();
     }
 
@@ -35,6 +36,7 @@ class UserController extends Controller
     {
         $user = User::findOrFail($req->id);
         $user->role = "user";
+        $user->save();
         return back();
     }
 
