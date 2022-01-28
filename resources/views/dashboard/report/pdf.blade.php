@@ -12,6 +12,16 @@
 </style>
 <body>
 
+    @php
+
+    function rupiah($nominal)
+    {
+        $result = "Rp".number_format($nominal,2,',','.');
+        return $result;
+    }
+
+    @endphp
+
     {{date('d-m-Y', strtotime($date));}}
 
 	<h1 class="fs-1 fw-bolder mt-2 mb-2">
@@ -28,9 +38,9 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>{{$pemasukan}}</td>
-                    <td>{{$pengeluaran}}</td>
-                    <td>{{$total}}</td>
+                    <td>{{rupiah($pemasukan);}}</td>
+                    <td>{{rupiah($pengeluaran);}}</td>
+                    <td>{{rupiah($total);}}</td>
                 </tr>
             </tbody>
         </table>
@@ -54,7 +64,7 @@
                         		<td>{{$loop->iteration}}</td>
                         		<td>{{$mn->description}}</td>
                         		<td>{{$mn->category->name}}</td>
-                        		<td>{{$mn->nominal}}</td>
+                        		<td>{{rupiah($mn->nominal);}}</td>
                         		<td>{{date('d-m-Y', strtotime($mn->created_at));}}</td>
                         	</tr>
                         	@endforeach

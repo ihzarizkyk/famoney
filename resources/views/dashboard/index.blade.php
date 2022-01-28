@@ -1,6 +1,17 @@
 @extends('dashboard.layouts.app')
 @section('title','Dashboard - Famoney App')
 @section('content')
+
+	@php
+
+	function rupiah($nominal)
+	{
+		$result = "Rp".number_format($nominal,2,',','.');
+		return $result;
+	}
+
+	@endphp
+
 <div class="container">
 	<div class="row text-center content-justify-center">
 
@@ -30,7 +41,7 @@
 						Total Uang Anda
 					</h2>
 					<p class="card-text fw-semi-bold">
-						Rp{{$count}}
+						{{rupiah($count);}}
 					</p>
 				</div>
 			</div>
@@ -43,7 +54,7 @@
 						Total Pemasukan Anda
 					</h2>
 					<p class="card-text fw-semi-bold">
-						Rp{{$pemasukan}}
+						{{rupiah($pemasukan)}}
 					</p>
 				</div>
 			</div>
@@ -56,7 +67,7 @@
 						Total Pengeluaran Anda
 					</h2>
 					<p class="card-text fw-semi-bold">
-						Rp{{$pengeluaran}}
+						{{rupiah($pengeluaran)}}
 					</p>
 				</div>
 			</div>

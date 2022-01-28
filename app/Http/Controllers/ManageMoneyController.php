@@ -59,8 +59,14 @@ class ManageMoneyController extends Controller
     public function destroy($id)
     {
         $money = Money::findOrFail($id);
-        $money->delete();
-        return redirect()->back()->with(["delete" => "berhasil dihapus!"]);
+        if(Auth::id() == $money->user_id)
+        {
+            $money->delete();
+            return redirect()->back()->with(["delete" => "berhasil dihapus!"]);   
+        }else{
+            return redirect('/dashboard/mymoney')->with(['failed' => 'gagal menghapus data!']);
+        }
+
     }
 
 }

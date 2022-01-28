@@ -25,6 +25,20 @@
 	<div class="alert bg-success fw-bold text-white">{{$message}}</div>
 	@endif
 
+	@if($message = session('failed'))
+	<div class="alert bg-danger fw-bold text-white">{{$message}}</div>
+	@endif
+
+	@php
+
+	function rupiah($nominal)
+	{
+		$result = "Rp".number_format($nominal,2,',','.');
+		return $result;
+	}
+
+	@endphp
+
 	<table class="table table-hover" id="table_money">
                         <thead>
                             <tr>
@@ -43,7 +57,7 @@
                         		<td>{{$loop->iteration}}</td>
                         		<td>{{$mn->description}}</td>
                         		<td>{{$mn->category->name}}</td>
-                        		<td>{{$mn->nominal}}</td>
+                        		<td>{{rupiah($mn->nominal);}}</td>
                         		<td>{{date('d-m-Y', strtotime($mn->created_at));}}</td>
                         		<td><a href="/dashboard/mymoney/{{$mn->id}}/delete" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure? ');"><i class="fas fa-trash"></i></a></td>
                         	</tr>

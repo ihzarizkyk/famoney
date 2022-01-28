@@ -1,6 +1,17 @@
 @extends('dashboard.layouts.app')
 @section('title','Report - Famoney App')
 @section('content')
+
+	@php
+
+	function rupiah($nominal)
+	{
+		$result = "Rp".number_format($nominal,2,',','.');
+		return $result;
+	}
+
+	@endphp
+
 <div class="container">
 
 	<h1 class="fs-1 fw-bolder mt-2 mb-2">
@@ -26,7 +37,7 @@
                         		<td>{{$loop->iteration}}</td>
                         		<td>{{$mn->description}}</td>
                         		<td>{{$mn->category->name}}</td>
-                        		<td>{{$mn->nominal}}</td>
+                        		<td>{{rupiah($mn->nominal);}}</td>
                         		<td>{{date('d-m-Y', strtotime($mn->created_at));}}</td>
                         	</tr>
                         	@endforeach
