@@ -5,11 +5,37 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Report PDF - Famoney</title>
 </head>
+<style>
+    html{
+        font-family: "helvetica";
+    }
+</style>
 <body>
 
+    {{date('d-m-Y', strtotime($date));}}
+
 	<h1 class="fs-1 fw-bolder mt-2 mb-2">
-		Money Report
+		Money Report - Famoney
 	</h1>
+
+        <table border="2">
+            <thead>
+                <tr>
+                    <th>Pengeluaran</th>
+                    <th>Pemasukan</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{$pemasukan}}</td>
+                    <td>{{$pengeluaran}}</td>
+                    <td>{{$total}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    <br>
 
 	<table border="2">
                         <thead class="thead">
@@ -34,6 +60,7 @@
                         	@endforeach
                         </tbody>
                     </table>
+
 
                <p>Print by {{Auth::user()->name}}</p>
 

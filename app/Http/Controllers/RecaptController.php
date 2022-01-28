@@ -22,17 +22,14 @@ class RecaptController extends Controller
         return view("dashboard.report.index",compact('money'));
     }
 
-    public function report(Request $req)
-    {
-        $money = Money::findOrFail($req->id);
-        $pdf = PDF::loadview('dashboard.report.pdf',['money' => $money]);
-        return $pdf->stream();
-    }
-
     public function reportAll(Request $req)
     {
         $money = Auth::user()->money()->with('category')->get();
-        $pdf = PDF::loadview('dashboard.report.pdf',['money' => $money]);
+        $pemasukan = Auth::user()->money()->where("category_id","=",1)->sum('nominal');
+        $pengeluaran = Auth::user()->money()->where("category_id","=",2)->sum('nominal');
+        $total = $pemasukan - $pengeluaran;
+        $date = now();
+        $pdf = PDF::loadview('dashboard.report.pdf',compact('money','date','pemasukan','pengeluaran','total'));
         return $pdf->stream();
     }
 }
