@@ -27,7 +27,9 @@
 						Kapan anda pertama kali memasukkan / mengeluarkan uang?
 					</h2>
 					<p class="card-text">
-						-
+						@foreach($start as $st)
+						{{date('d-m-Y', strtotime($st->created_at));}}
+						@endforeach
 					</p>
 				</div>
 			</div>

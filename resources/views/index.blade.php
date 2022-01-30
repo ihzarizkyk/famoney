@@ -3,21 +3,19 @@
 @section('content')
 
 		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+
 		  <div class="container-fluid">
-		    <a class="navbar-brand fw-bold" href="#"> <img src="Image/LOGO.png" width="140" height="38"></a>
+		    <a class="navbar-brand fw-bold mb-2" href="#"> <img src="Image/LOGO.png" width="140" height="38"></a>
 		    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-		    <span class="navbar-toggler-icon"></span>
+		      <span class="navbar-toggler-icon"></span>
 		    </button>
 		    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 		      <div class="navbar-nav">
+		        <a class="nav-link active" aria-current="page" href="#">Home</a>
+		        <a class="nav-link" href="/auth/login">Login</a>
+		        <a class="nav-link" href="/auth/register">Register</a>
 		      </div>
 		    </div>
-                <div class="row">
-                    <div class=" text-right">
-                        <a href="/auth/register" class="btn btn-outline-primary m-2" >REGISTER</a>
-                        <a href="/auth/login" class="btn btn-primary m-2">LOGIN</a>
-                    </div>
-                </div>
 		  </div>
 		</nav>
 

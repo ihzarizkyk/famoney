@@ -20,6 +20,7 @@ class DashboardController extends Controller
         $pemasukan = Auth::user()->money()->where("category_id","=",1)->sum("nominal");
         $pengeluaran = Auth::user()->money()->where("category_id","=",2)->sum("nominal");
         $count = $pemasukan - $pengeluaran;
-        return view("dashboard.index",compact('pemasukan','pengeluaran','count'));
+        $start = Auth::user()->money()->orderBy("created_at","ASC")->limit(1)->get();
+        return view("dashboard.index",compact('pemasukan','pengeluaran','count','start'));
     }
 }

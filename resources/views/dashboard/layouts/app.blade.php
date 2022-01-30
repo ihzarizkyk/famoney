@@ -28,7 +28,9 @@
                     <a class="list-group-item list-group-item-action list-group-item-light p-3 my-3 w-75" href="#">&nbsp;Hi, {{Auth::user()->name}}!</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3 my-3 w-75" href="/dashboard">&nbsp;&nbsp;<i class="fas fa-tachometer-alt"></i> Dashboard</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3 my-3 w-75" href="/dashboard/myprofile">&nbsp;&nbsp;<i class="fas fa-user"></i> Profile</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3 my-3 w-75" href="/dashboard/user">&nbsp;&nbsp;<i class="fas fa-user"></i> User Management</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 my-3 w-75" href="/dashboard/mymoney">&nbsp;&nbsp;<i class="fas fa-money-check"></i> My Money</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 my-3 w-75" href="/dashboard/report">&nbsp;&nbsp;<i class="fas fa-file-alt"></i> Report</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3 my-3 w-75" href="/dashboard/user">&nbsp;&nbsp;<i class="fas fa-users-cog"></i> User Management</a>
                     <div class=""></div>
                     @endif
                 </div>

@@ -25,7 +25,7 @@ class RegisterController extends Controller
     {
         $req->validate([
             "name" => "required|unique:users,name",
-            "email" => "required|unique:users,email",
+            "email" => "required|unique:users,email|email:rfc,dns",
             "password" => "required"]);
 
             $usr = User::create([
